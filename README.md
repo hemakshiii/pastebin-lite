@@ -37,14 +37,6 @@ A lightweight pastebin application that allows users to create, view, and share 
 - PostgreSQL database for storing pastes and metadata.
 - `pastes` table stores: `id`, `content`, `created_at`, `expires_at`, `max_views`, `views_used`.
 
-## API Endpoints
-
-POST /api/pastes → Create a new paste
-
-GET /api/pastes/:id → Get paste details (JSON)
-
-GET /p/:id → View paste as HTML page
-
 ## Important Decision
 
 Used UUID for paste IDs to ensure uniqueness.
@@ -54,3 +46,21 @@ Optional TTL and max_views to handle paste expiration.
 Bootstrap used for lightweight and responsive UI.
 
 Server-side HTML rendering for viewing pastes.
+
+## API Endpoints
+
+POST /api/pastes → Create a new paste
+
+GET /api/pastes/:id → Get paste details (JSON)
+
+GET /p/:id → View paste as HTML page
+
+## TechStack
+Backend: Node.js, Express.js
+
+Frontend: HTML + Bootstrap
+
+Database / Persistence Layer: PostgreSQL (hosted on Neon)
+
+Unique ID generation: UUID
+
